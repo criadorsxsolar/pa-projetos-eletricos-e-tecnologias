@@ -44,13 +44,15 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            justify-content: center; /* ← chave para centralizar horizontalmente */
+            gap: 25px;
+            margin-bottom: 25px;
         }
 
         .logo-icon {
             width: 60px;
             height: 60px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.1); /* ← fundo opaco voltou! */
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -61,11 +63,14 @@
             font-size: 2.2em;
             font-weight: bold;
             margin-bottom: 5px;
+            text-align: center; /* ← garante que o texto fique centralizado */
         }
+
 
         .logo-text p {
             font-size: 0.9em;
             opacity: 0.9;
+            text-align: center; /* ← centraliza o subtítulo */
         }
 
         nav ul {
@@ -521,16 +526,17 @@
 
 <body>
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="images/logo.svg" alt="Logo PA Projetos" style="width: 40px; height: 40px; object-fit: contain;">
-                 </div>
-                <div class="logo-text">
-                        <h1>Paulo Azevedo</h1>
-                        <p>Projetos elétricos e tecnologias</p>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="images/logo.svg" alt="Logo PA Projetos" style="width: 45px; height: 45px; object-fit: contain;">
                 </div>
-            </div>
+                <div class="logo-text">
+                    <h1>Paulo Azevedo</h1>
+                    <p>Projetos elétricos e tecnologias</p>
+                </div>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#inicio">Início</a></li>
