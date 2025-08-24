@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulo Azevedo - Projetos Elétricos e Tecnologias</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #f59e0b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .cta-button:hover {
+            background: #d97706;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5em;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 1.1em;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text {
+            padding: 20px;
+        }
+
+        .about-text h3 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #666;
+            text-align: justify;
+        }
+
+        /* Services Grid */
+        .services {
+            background: #f8fafc;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #3b82f6;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .service-card h3 {
+            color: #1e3a8a;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            color: #555;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .service-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            background: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            height: 250px;
+            background: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #666;
+            position: relative;
+        }
+
+        .portfolio-content {
+            padding: 30px;
+        }
+
+        .portfolio-content h3 {
+            color: #1e3a8a;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Technical Details Section */
+        .technical {
+            background: #f8fafc;
+        }
+
+        .technical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .technical-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .technical-image {
+            height: 200px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #f59e0b;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 2.2em;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .technical-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation */
+        .loading {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Section animations */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Paulo Azevedo</h1>
+                        <p>Projetos elétricos e tecnologias</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Portfólio</h2>
+            <p>Soluções completas em projetos de engenharia, com foco em projetos de energia solar, entradas de energia,
+                projetos elétricos prediais e industriais, além de sistemas de proteção contra descargas atmosféricas
+                (SPDA).</p>
+            <a href="#servicos" class="cta-button">Conheça nossos serviços</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Apresentação</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div
+                        style="width: 100%; height: 300px; background: #e5e7eb; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: #666; font-size: 18px;">
+                        [Pasta: images/apresentacao.jpg]
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>PA Projetos</h3>
+                    <p>A PA Projetos é especializada em soluções completas em projetos de engenharia, com foco em
+                        projetos de energia solar, entradas de energia, projetos elétricos prediais e industriais, além
+                        de sistemas de proteção contra descargas atmosféricas (SPDA). Nosso diferencial está na precisão
+                        técnica, na conformidade com normas vigentes e na utilização de ferramentas BIM para garantir
+                        compatibilidade e assertividade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos soluções completas e especializadas para todas as suas necessidades em projetos elétricos
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Energia Fotovoltaica</h3>
+                    <p>Com ampla experiência no setor solar, a PA Projetos atua no desenvolvimento de soluções
+                        personalizadas para usinas fotovoltaicas de diferentes portes, garantindo eficiência,
+                        viabilidade e conformidade regulatória.</p>
+                    <p><strong>Diferenciais:</strong></p>
+                    <ul class="service-list">
+                        <li>Mais de 200 MW aprovados com orçamento de conexão</li>
+                        <li>Especialista em projetos para concessionárias do Rio de Janeiro</li>
+                        <li>Aprovações consolidadas para Micro e Mini Geração Distribuída (MMGD)</li>
+                        <li>Experiência com diversos integradores e empresas de energia solar</li>
+                        <li>Elaboração de projetos executivos priorizando viabilidade, custo e rendimento máximo</li>
+                        <li>Consultoria para otimizar equipes internas de projetos</li>
+                        <li>Terceirização do setor de projetos</li>
+                    </ul>
+                </div>
+
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Entrada de Energia</h3>
+                    <p>Oferecemos soluções completas em projetos de entrada de energia em baixa e média tensão,
+                        atendendo às normas concessionárias e garantindo segurança, conformidade, eficiência e rápida
+                        aprovação.</p>
+                    <p><strong>Atuação:</strong></p>
+                    <ul class="service-list">
+                        <li>Projetos de ligação nova e aumento de carga</li>
+                        <li>Padrões específicos para usinas fotovoltaicas</li>
+                        <li>Subestações simplificadas, convencionais e modulares (SKID)</li>
+                        <li>Projetos de entrada de energia coletiva para prédios, condomínios e empreendimentos
+                            comerciais</li>
+                    </ul>
+                </div>
+
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Projetos Elétricos</h3>
+                    <p>Desenvolvemos soluções elétricas completas para empreendimentos residenciais, comerciais e
+                        industriais, unindo qualidade técnica, detalhamento preciso e inovação em modelagem 3D.</p>
+                    <p><strong>Atuação:</strong></p>
+                    <ul class="service-list">
+                        <li>Residências de alto padrão: Soluções personalizadas integrando eficiência, conforto e
+                            segurança</li>
+                        <li>Projetos industriais e comerciais: Dimensionados para atender normas e demandas operacionais
+                        </li>
+                        <li>Projetos detalhados: Entregues com lista de materiais completa, detalhes em 3D e informações
+                            que facilitam execução e orçamento</li>
+                    </ul>
+                </div>
+
+                <div class="service-card loading">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>SPDA e Aterramento</h3>
+                    <p>A PA Projetos desenvolve projetos de Sistemas de Proteção contra Descargas Atmosféricas (SPDA) e
+                        sistemas de aterramento elétrico, seguindo rigorosamente a NBR 5419/2015. Os projetos priorizam
+                        a segurança das instalações e pessoas, além da confiabilidade operacional.</p>
+                    <p><strong>Atuação:</strong></p>
+                    <ul class="service-list">
+                        <li>Projetos de SPDA para edificações residenciais, comerciais e industriais</li>
+                        <li>Dimensionamento e aterramento de sistemas de aterramento</li>
+                        <li>Laudos e adequações em sistemas existentes</li>
+                        <li>Integração de SPDA com sistemas elétricos e eletrônicos para proteção completa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Portfólio de Projetos</h2>
+                <p>Conheça alguns dos nossos principais projetos executados</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        [Pasta: images/parque_solar_arinos.jpg]
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Parque Solar Arinos - MG</h3>
+                        <p>Colaboramos com a Esteyco e Conectrom na expansão da produção de energia renovável no Brasil,
+                            assumindo o dimensionamento e projeto executivo do Complexo Solar Fotovoltaico Arinos,
+                            localizado no estado de Minas Gerais.</p>
+                        <div class="portfolio-stats">
+                            <div class="stat">
+                                <div class="stat-number">432</div>
+                                <div class="stat-label">MWp</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">720+</div>
+                                <div class="stat-label">mil módulos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        [Pasta: images/projetos_executivos_ufvs.jpg]
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Projetos Executivos e Homologações de UFVs</h3>
+                        <p>Desenvolvimento de projetos executivos completos para usinas fotovoltaicas, garantindo
+                            eficiência máxima e aprovação junto às concessionárias.</p>
+                        <div class="portfolio-stats">
+                            <div class="stat">
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label">MW Aprovados</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        [Pasta: images/projeto_eletrico_revit.jpg]
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Projetos Elétricos em 3D</h3>
+                        <p>Utilizamos tecnologia BIM para desenvolvimento de projetos elétricos detalhados, incluindo
+                            laboratórios e complexos industriais.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        [Pasta: images/museu_imperial_3d.jpg]
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Museu Imperial de Petrópolis - RJ</h3>
+                        <p>Detalhamento completo de projetos elétricos em 3D para o Museu Imperial de Petrópolis,
+                            garantindo preservação histórica e modernização elétrica.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        [Pasta: images/entrada_energia_coletiva.jpg]
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Padrão de Entrada Coletivo</h3>
+                        <p>Projetos especializados para entradas de energia coletivas em condomínios, garantindo
+                            eficiência e conformidade regulatória.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        [Pasta: images/spda_aterramento_museu.jpg]
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>SPDA e Aterramento - Museu Imperial</h3>
+                        <p>Sistema completo de proteção contra descargas atmosféricas para o Museu Imperial de
+                            Petrópolis, seguindo rigorosamente a NBR 5419/2015.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Contato</h2>
+                <p style="color: rgba(255,255,255,0.9);">Entre em contato conosco para discutir seu próximo projeto</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Paulo Azevedo</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            <a href="https://wa.me/5521968994225" style="color: white; text-decoration: none;">(21)
+                                96899-4225</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong>E-mail</strong><br>
+                            <a href="mailto:contato.paprojetos@gmail.com"
+                                style="color: white; text-decoration: none;">contato.paprojetos@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://instagram.com/troque-aqui-seu-usuario-real" class="social-link"
+                            title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/troque-aqui-seu-usuario-real" class="social-link"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Solicite um orçamento</h3>
+                    <div
+                        style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 15px; text-align: center;">
+                        <i class="fas fa-phone-alt" style="font-size: 3em; margin-bottom: 20px; opacity: 0.7;"></i>
+                        <p style="font-size: 1.2em; margin-bottom: 20px;">Estamos prontos para atender você!</p>
+                        <p>Entre em contato através do WhatsApp ou e-mail para discutirmos seu projeto e recebermos um
+                            orçamento personalizado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Paulo Azevedo - Projetos Elétricos e Tecnologias. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Loading animations for service cards
+        setTimeout(() => {
+            document.querySelectorAll('.loading').forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        }, 500);
+
+        // Mobile menu toggle (if needed)
+        const header = document.querySelector('header');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Add transition to header
+        header.style.transition = 'transform 0.3s ease';
+
+        // Highlight active navigation item
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add active state styling
+        const style = document.createElement('style');
+        style.textContent = `
+            nav a.active {
+                background: rgba(255,255,255,0.2);
+                transform: translateY(-2px);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Animate counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                const increment = target / 100;
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target + (counter.textContent.includes('+') ? '+' : '');
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.ceil(current);
+                    }
+                }, 20);
+            });
+        }
+
+        // Trigger counter animation when portfolio section is visible
+        const portfolioSection = document.querySelector('#portfolio');
+        const portfolioObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    portfolioObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (portfolioSection) {
+            portfolioObserver.observe(portfolioSection);
+        }
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add loading animation to page
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Add hover effects to portfolio items
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+
+            item.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add click effect to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function () {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // Lazy loading for images (when you add real images)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+
+</html>
